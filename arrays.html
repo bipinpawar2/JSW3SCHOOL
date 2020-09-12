@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <body>
+            <p>button change</p>
+          <button onclick="myfunction()">Hit me</button>
+          <p id="demo"></p>
+
+            
+            <script>
+             function myfunction(){
+                 var text="hello";
+                 var text1="Javascript is display";
+                 
+                 document.getElementById("demo").innerHTML=text1;
+             }
+
+              var cars = ["Creta", "Baleno", "ALto","Swift"];
+              console.log(cars)
+              console.log(cars[0])
+              console.log(cars[1]) //access variable by refering index no.
+              //value can be change the value by index no.
+              cars[2]="Safari";
+              console.log(cars)
+              console.log(cars.length) // The length property returns the number of elements
+              cars.push("Harrier");
+              console.log(cars)
+              //JavaScript does not support arrays with named indexes.
+              //Arrays with named indexes are called associative arrays (or hashes)
+              console.log(cars.toString())  //The JavaScript method toString() converts an array to a string.
+              console.log(cars.pop()) //remove last element.
+              console.log(cars)
+              console.log(cars.shift()) // remove first element.
+              cars.unshift("Celtos") //add at first
+              console.log(cars)
+              //Since JavaScript arrays are objects
+              cars.splice(2,0,"Alto","Indica")// elements added from 2 index ,0 is no of element delete.
+              console.log(cars)
+              var price=[10000,20000,30000,40000,50000,60000];
+              console.log(price)
+              var both=cars.concat(price) //adding to array by concat.
+              console.log(both)  
+               
+ 
+            </script>
+        </body>
+    </head>
+</html>

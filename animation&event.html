@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title> </title>
+
+    
+    </head>
+    <body>
+        <h1 onclick="this.innerHTML='Sorry'">Please try again</h1>
+        <h1><div onclick="change(this)">click On me</div></h1>
+
+        <p id="demo"></p>
+        <script>
+            function change(id){
+              id.innerHTML="oops";  
+            }
+
+        </script>
+        <style> 
+              #back{
+                  width:300px;
+                  height: 300px;
+                  position: relative;
+                  background: violet;
+              }  
+              #front{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background:red;
+              }
+
+              /*  According to the W3C HTML DOM standard, everything in an HTML document is a node:
+The entire document is a document node
+Every HTML element is an element node
+The text inside HTML elements are text nodes
+Every HTML attribute is an attribute node (deprecated)
+All comments are comment nodes.
+Element Node is just simply element.
+<html> is the root node
+<html> has no parents
+<html> is the parent of <head> and <body>
+<head> is the first child of <html>
+<body> is the last child of <html>
+              */
+
+/*The HTMLCollection Object
+The getElementsByTagName() method returns an HTMLCollection object.
+An HTMLCollection object is an array-like list (collection) of HTML elements.
+The following code selects all <p> elements in a document:
+Or simply by using index no we can get element
+An HTMLCollection may look like an array, but it is not.
+
+You can loop through the list and refer to the elements with a number (just like an array).
+
+However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.
+*/
+    
+    
+        </style>
+        <div id="back"></div>
+        <div id="front"></div>
+    </body>
+</html>

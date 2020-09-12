@@ -1,0 +1,71 @@
+<html>
+    <body>
+        <script>
+            //string
+ var car="\"Mercedes\"";  //\"  "\ is see result in only " ".
+ var model=220 + "d";
+ console.log(car,model)
+console.log(car.length)     //length of car variable.               
+
+// string can be object and Don't create strings as objects. It slows down execution speed.
+//The new keyword complicates the code. This can produce some unexpected results:
+
+var x = "John";        // x is a string
+var y = new String("John");  // y is an object
+console.log(x)
+console.log(y)         //returns data and value .
+//Objects cannot be compared:
+//if we try to compare object by == then also it gives  false because (x is string and y is object).
+
+//indexOf() and search().
+
+var str="hello john";
+var pos=str.search("john");
+console.log(pos)      //at what position is john that tells by search.
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("where");
+console.log(pos)
+var pos = str.indexOf("John"); // is that value noty found then it returns -1.
+console.log(pos)
+/*The two methods, indexOf() and search(), are equal?
+They accept the same arguments (parameters), and return the same value?
+The two methods are NOT equal. These are the differences:
+The search() method cannot take a second start position argument. therefore methods of extraction is us.
+The indexOf() method cannot take powerful search values (regular expressions). */
+
+// method Of Extraction
+///1) The slice() Method
+/*
+slice() extracts a part of a string and returns the extracted part in a new string.
+
+The method takes 2 parameters: the start position, and the end position (end not included).
+*/
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13);
+console.log(res) // result w ill be banana, if value is negative() it will count from end.
+var res = str.slice(7);
+console.log(res)//banana,kiwi. if value is negative it will count from end.
+      
+//2)substring() method
+//it same as slice ,the difference is that substring() cannot accept negative indexes means no negative value like(-7,-13).     
+
+//3)substr() method.
+/*substr() is similar to slice().
+The difference is that the second parameter specifies the length of the extracted part
+*/
+var str = "Apple, Banana, Kiwi";
+var res =str.substr(7,6); //banana
+console.log(res) // if we want more letters after banana then add nos(7,8,9...,13) only in 2nd parameters.
+
+//contcat text.
+var tex1="Anil";
+var tex2="kapoor";
+var tex3 = tex1.concat(" ",tex2);
+console.log(tex3)
+
+//str.trim() removes whitespace from  a string
+      
+        </script>
+    </body>
+</html>

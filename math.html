@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <p id="demo"></p>
+        <p id="hi"></p>
+        <script>
+            //document.getElementById("demo").innerHTML = Math.PI;// returm 3.14.
+        //  document.getElementById("hi").innerHTML = Math.round(4.4);  //return 5.
+           // Math.pow(8, 2); // 8 is no and 2 is power .returns 64
+          //  Math.sqrt(64);      // returns 8
+       //Math.floor(x) returns the value of x rounded down to its nearest integer:
+     //  Math.floor(4.7);    // returns 4.
+/*
+     In this example, this represents the person object.
+    Because the person object "owns" the fullName method..*/
+      // Create an object:
+var person = {
+  firstName: "Bipin",
+  lastName : "Pawar",
+  id     : 0018,
+  fullName : function() {
+    return this.firstName + " " + this.lastName + this.id;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+
+
+       
+        </script>
+    </body>
+</html>

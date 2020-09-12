@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body><p id="demo"></p>
+        <script> 
+       //      var d =new Date();  // now Date is an object.
+     //   document.getElementById("demo").innerHTML=d;
+
+       //     var e =new Date(2020,08,02,11,04,30);  // we can also give manually.
+           //7 numbers specify year, month, day, hour, minute, second, and millisecond .
+         //   document.getElementById("demo").innerHTML=e;
+
+        //   var d= new Date("sep 02 2020 11:07:00")
+          //  console.log("\n");
+           // document.getElementById("demo").innerHTML=d;
+
+            // if we give only one parameter in inside Date() then it consider as millisecond.
+           // js follow strict format of ISO.
+       //  var d= new Date("2020-08");
+         //console.log('\n')
+
+         //document.getElementById("demo").innerHTML=d;
+        // the Date.parse() method to convert it to milliseconds.
+/*
+        var msec = Date.parse("March 21, 2012");
+        document.getElementById("demo").innerHTML = msec;
+  */     
+  // getmethod()   
+  /*
+        var d = new Date();
+         document.getElementById("demo").innerHTML = d.getTime();//The getTime() method returns the number of milliseconds since January 1, 1970.
+         document.getElementById("demo").innerHTML = d.getFullYear();
+         document.getElementById("demo").innerHTML = d.getMonth()+1;//In JavaScript, the first month (January) is month number 0, so December returns month number 11.
+         //sunday is 0 in javascript.
+*/   
+//setmethod()
+var d = new Date();
+d.setMonth(11);
+document.getElementById("demo").innerHTML = d;// to ony set particular value.
+d.setDate(15);
+document.getElementById("demo").innerHTML = d;
+d.setHours(22);
+document.getElementById("demo").innerHTML = d;
+
+
+        </script>
+    </body>
+</html>

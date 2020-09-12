@@ -1,0 +1,153 @@
+<html>
+    <head></head>
+    <body>
+        <p id="demo"></p>
+        <script>
+ /*
+In JavaScript, almost "everything" is an object.
+1) Booleans can be objects (if defined with the new keyword)
+2) Numbers can be objects (if defined with the new keyword)
+3) trings can be objects (if defined with the new keyword)
+4) Dates are always objects
+5) Maths are always objects
+6) Regular expressions are always objects
+7) Arrays are always objects
+8) Functions are always objects
+9) Objects are always objects
+10) All JavaScript values, except primitives, are objects.
+ --primitive value is a value that has no properties or methods.
+ --A primitive data type is data that has a primitive value.
+--JavaScript defines 5 types of primitive data types:->[string,number,boolean,null,undefined]
+
+ */
+/*
+   var name="pramod";
+   document.getElementById("demo").innerHTML=name;
+   console.log(name);
+*/
+   var person = {
+  firstName: "John",
+  lastName: "Cena",
+  age: 40,
+  eyeColor: "blue"
+};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+var x=person;
+document.getElementById("demo").innerHTML=x;  // it will give object object.because their is no copy of person.
+
+x.age=60;
+document.getElementById("demo").innerHTML=person.age; // This will change both x.age and person.age
+
+//Objects are mutable: They are addressed by reference, not by value
+//we can add new properties inperson.
+person.gender="male";
+document.getElementById("demo").innerHTML=person.gender;
+// it will delete propert value and property itself.
+delete person.gender;
+document.getElementById("demo").innerHTML=person.age + " " + person.gender;
+
+//we can display object value by array. alternative method to display.
+
+var myarray=Object.values(person);
+document.getElementById("demo").innerHTML=myarray;
+
+
+
+//getter and setter.  //This example uses a lang property to get the value of the language property.
+var person = {
+  firstName: "John",
+  lastName: "Cena",
+  age: 40,
+  eyeColor: "blue",
+  language:"english",
+  get lang(){ return this.language;}
+};
+document.getElementById("demo").innerHTML=person.lang;
+
+//to set we use setter.
+var person = {
+  firstName: "John",
+  lastName: "Cena",
+  age: 40,
+  eyeColor: "blue",
+  language:"NO",
+set lang(value){
+    this.language=value;
+}};
+person.lang="eng";
+document.getElementById("demo").innerHTML = person.language;
+
+//difference between detter and function
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  get fullName()                //if we use  function we have to write ,fullname function(){ return this.firstName + " " + this.lastName;}
+  {        
+    return this.firstName + " " + this.lastName;
+  }
+};
+// Display data from the object using a getter:
+document.getElementById("demo").innerHTML = person.fullName;
+  
+//contructor.
+function person(first,last,age)
+{
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+}
+//creating object
+var myfather= new person("john","doe", 53);
+document.getElementById("demo").innerHTML=myfather.name +" "+ myfather.lastName;
+ /*They only create single objects.
+Sometimes we need a "blueprint" for creating many objects of the same "type".
+The way to create an "object type", is to use an object constructor function.
+In the example above, function Person() is an object constructor function.
+Objects of the same type are created by calling the constructor function with the new keyword:
+*/
+/*
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+Sometimes you want to add new properties (or methods) to an object constructor.
+Using the prototype Property
+The JavaScript prototype property allows you to add new properties to object constructors:
+The JavaScript prototype property also allows you to add new methods to objects constructors:
+e.g we have top add ,,Person.nationality = "English";  then 
+
+*/
+/*
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";
+}
+
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+" The nationality of my mother is " + myMother.nationality;
+*/
+// call()
+var person = {
+fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+var person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+var person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+var x = person.fullName.call(person1, "Pune", "India"); 
+document.getElementById("demo").innerHTML = x; 
+</script>
+    </body>
+</html>

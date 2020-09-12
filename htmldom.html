@@ -1,0 +1,39 @@
+<html>
+
+<title></title>
+<body><p id="demo">Original Text</p>
+      <p>By Tag Name</p>
+      <p class="byclassname">This Is By Class Name</p>
+      <p id="p2">This Is for changing style using DOM</p>
+      <h2 id="p3">This Is for changing style in DOM by using Button</h2>
+      <button type="button" onclick="document.getElementById('p3').style.color='red'">TRY</button>
+    <script>
+    /*In the example above, getElementById is a method, while innerHTML is a property.
+         The getElementById Method
+         The most common way to access an HTML element is to use the id of the element.
+         In the example above the getElementById method used id="demo" to find the element.*/
+
+
+        document.getElementById("demo");//1)to show as it is. and to change content use 2nd type.
+      // 2)  document.getElementById("demo").innerHTML = "Hello World!";
+
+
+         document.getElementsByTagName("p");  //1st type .simple.and to change inner text use second.
+      // 2) document.getElementsByTagName("p")[1].innerHTML="HELLO";   //2nd type. [1] is for demo tag is at 1 no and by tag is at 1 no.index start with 0.
+        
+      document.getElementsByClassName("byclassname");
+      
+      //to change the attribute.
+        /*
+        <img id="image" src="smiley.gif" width="160" height="120">  // 1st is simley.gif image.
+          <script>
+          document.getElementById("image").src = "landscape.jpg";</scrip>// now new is landscape.jpg
+          
+          */
+
+
+          //The HTML DOM allows JavaScript to change the style of HTML elements.
+          document.getElementById("p2").style.color = "blue";
+        </script>
+</body>
+</html>
